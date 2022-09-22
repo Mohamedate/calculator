@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Caveat&family=Clicker+Script&family=Lobster&family=Luxurious+Roman&family=Noto+Kufi+Arabic&family=Poppins:wght@200;300;400;500;600&family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+*,*::before,
+*::after { 
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+body { 
+
+font-family: 'Cairo', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Clicker Script', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Luxurious Roman', cursive;
+font-family: 'Noto Kufi Arabic', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quintessential', cursive;
+background:url("/white.jpg") no-repeat;
+background-position: center;
+background-size: cover;
+height: 100vh;
+}
+body.dark { 
+    background:url("/black.jpg") no-repeat;
+background-position: center;
+background-size: cover;
+
+}
+.calculator { 
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 400px;
+    width: 290px;
+    padding: 7rem 0 2.5rem;
+    box-shadow: 0 0 6px 0 #00000038;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    border-radius: 1rem;
+    margin:3rem auto;
+    grid-template-columns: repeat(4,60px);
+    grid-template-rows: minmax(105px,auto) repeat(5,60px);
+    gap: 10px;
+    position: relative;
+    
+}
+body.dark .calculator { 
+    background-color: transparent;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25),
+    -15px -15px 20px rgba(255,255,255,0.1)
+}
+.sun,
+.night { 
+    position: absolute;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: none;
+    color: #474b4d;
+    cursor: pointer;
+}
+.night.active { 
+    display: block;
+}
+.sun { 
+    color: #ffc107;
+}
+.calculator ul { 
+    position: absolute;
+    display: flex;
+    left: 1rem;
+    padding: 0;
+}
+.calculator ul li { 
+    list-style: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    
+}
+.calculator ul li.red { 
+    background: red;
+}
+.calculator ul li.blue { 
+    background: #673ab7;
+}
+.calculator ul li.green { 
+    background: #07bf0e;
+}
+.calculator ul li.active { 
+    border: 4px solid #fff;
+}
+.output { 
+    grid-column: 1 / 5;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 1rem;
+    word-break: break-all;
+    box-shadow: inset -6px -6px 13px #fff,inset 6px 6px 13px rgba(0,0,0,.16);
+    color: rgb(26,25,25);
+    font-size: 2rem;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+}
+body.dark .output {
+    box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.5),
+    inset -15px -15px 20px rgba(255,255,255, .1);
+    color: white;
+
+}
+.previous-operation,
+.current-operation { 
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Clicker Script', cursive;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+}
+.previous-operation { 
+    color: #787777;
+    font-size: 1rem;
+}
+body.dark .previous-operation { 
+    color: #c7c3c3;
+}
+.current-operation { 
+    font-size: 2rem;
+   
+}
+body.dark .current-operation { 
+    color: #fff;
+}
+.calculator > button { 
+    cursor: pointer;
+    font-size: 2rem;
+    border:none;
+    outline: none;
+    background-color: rgba(255,255,255, .75);
+    box-shadow: inset 6px 6px 13px #fff,6px 6px 13px rgba(0,0,0,.16);
+    border-radius: 50%;
+    font-family: 'Cairo', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Clicker Script', cursive;
+font-family: 'Lobster', cursive;
+font-weight: bold;
+color: #673ab7;
+}
+body.dark .calculator > button { 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),
+     -5px -5px 10px rgba(255,255,255, 0.1);
+     background-color: transparent;
+
+}
+body.dark .calculator > button:hover { 
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25),
+   inset  -5px -5px 10px rgba(255,255,255, 0.1);
+
+}
+button.two { 
+    grid-column: span 2;
+    border-radius: 2rem;
+}
+.calculator button.cairo { 
+    font-family: 'Cairo', sans-serif;
+
+}
+.calculator [data-delete]{ 
+    font-size: 1.5rem;
+}
+.calculator > button:hover { 
+    background-color: white;
+    box-shadow: inset -6px -6px 13px #fff, inset 6px 6px 13px rgb(0 0 0 / 16%);
+}
