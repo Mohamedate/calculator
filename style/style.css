@@ -21,6 +21,7 @@ background:url("../white.jpg") no-repeat;
 background-position: center;
 background-size: cover;
 height: 100vh;
+position: relative;
 }
 body.dark { 
     background:url("../black.jpg") no-repeat;
@@ -181,4 +182,37 @@ button.two {
 .calculator > button:hover { 
     background-color: white;
     box-shadow: inset -6px -6px 13px #fff, inset 6px 6px 13px rgb(0 0 0 / 16%);
+}
+
+.copyright { 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Clicker Script', cursive;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+}
+.copyright a { 
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Clicker Script', cursive;
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    font-size: 1.5rem;
+ 
+}
+body.dark .copyright { 
+    color: #9d9d9d;
+}
+@media (max-width:768px) {
+
+    .copyright a { 
+       font-size: 1rem;
+    }
 }
